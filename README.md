@@ -13,6 +13,32 @@ git clone https://github.com/vinitgodara453-collab/naman-sell-otp-bot.git && cd 
 
 ---
 
+## ☁️ Heroku Deployment:
+
+**Option 1 – One-click button:**
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vinitgodara453-collab/naman-sell-otp-bot)
+
+Fill in `BOT_TOKEN`, `ADMIN_ID` and `FIVESIM_API_KEY`, then deploy.
+
+**Option 2 – Heroku CLI script:**
+```bash
+bash deploy_heroku.sh my-app-name
+```
+
+**Option 3 – Manual:**
+```bash
+heroku create my-app-name
+heroku config:set BOT_TOKEN=xxx ADMIN_ID=123456789 FIVESIM_API_KEY=xxx
+git push heroku main
+heroku ps:scale web=0 worker=1
+heroku logs --tail
+```
+
+> ⚠️ Heroku's filesystem is **ephemeral**: the SQLite DB (wallets, deposits) is wiped on every dyno restart/deploy (at least once every 24h). For real money balances, move to Heroku Postgres or another persistent DB.
+
+---
+
 ## 📱 Termux (Android Mobile) Setup:
 ```bash
 pkg update -y && pkg install -y git python && git clone https://github.com/vinitgodara453-collab/naman-sell-otp-bot.git && cd naman-sell-otp-bot && pip install -r requirements.txt && bash run_naman_bot.sh
