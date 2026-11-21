@@ -1,0 +1,40 @@
+{
+  "name": "Naman Sell OTP Bot",
+  "description": "5SIM.net virtual number & OTP Telegram bot (worker dyno, long polling)",
+  "repository": "https://github.com/vinitgodara453-collab/naman-sell-otp-bot",
+  "keywords": ["telegram", "bot", "otp", "5sim", "python"],
+  "buildpacks": [{ "url": "heroku/python" }],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Telegram Bot Token from @BotFather",
+      "required": true
+    },
+    "ADMIN_ID": {
+      "description": "Your numeric Telegram user ID (get it from @userinfobot)",
+      "required": true
+    },
+    "FIVESIM_API_KEY": {
+      "description": "Your 5SIM.net API key",
+      "required": true
+    },
+    "UPI_ID": {
+      "description": "UPI ID shown to users for wallet recharge",
+      "value": "vinit-godara@fam"
+    },
+    "UPI_NAME": {
+      "description": "Name shown with the UPI ID",
+      "value": "Vinit Godara"
+    },
+    "RUB_TO_INR_RATE": {
+      "description": "RUB to INR conversion rate used for pricing",
+      "value": "1.20"
+    },
+    "DATABASE_PATH": {
+      "description": "SQLite file path (note: Heroku filesystem is ephemeral)",
+      "value": "naman_sell.db"
+    }
+  },
+  "formation": {
+    "worker": { "quantity": 1 }
+  }
+}
