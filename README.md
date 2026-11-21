@@ -17,7 +17,7 @@ git clone https://github.com/vinitgodara453-collab/naman-sell-otp-bot.git && cd 
 
 **Option 1 – One-click button:**
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vinitgodara453-collab/naman-sell-otp-bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DevxOp1/Primium_otp)
 
 Fill in `BOT_TOKEN`, `ADMIN_ID` and `FIVESIM_API_KEY`, then deploy.
 
